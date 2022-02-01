@@ -10,30 +10,28 @@
      padding: 0px;
      margin: 0px;
      box-sizing: border-box;
-     text-decoration: none;
-     /* text decoration none removes the underline from the linkes */
+     
    }
-   /* this universal styling makes the box stick in corner  */
-   body{
-     background-color: black;
-
-   }
-.background{
-  background-color:aquamarine;
-  height: 250px;
-  width: 250px;
-  padding: 50px;
   
-
+   
+.parent{
+  background-color:aquamarine;
+  height: 60px;
+  padding: 20px;
+  width: 80vw;
 }
 
+.child{
+  background-color:blueviolet;
+  height: 20px;
+  width: 80%;
+}
  </style>
 </head>
 <body>
- <div class="background">
-   <span>
-     <a href="ss">link</a>
-   </span> </div>
+ <div class="parent"> 
+   <div class="child"></div>
+ </div>
  
 </body>
 </html>
