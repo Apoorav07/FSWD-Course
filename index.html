@@ -11,19 +11,29 @@
      padding: 0px;
      box-sizing: border-box;
    }
-
-   h1{
-     background-color: crimson;
-     color: white;
-     height: 50vh;
-     padding: 10px;
-     text-align: right;
-     padding-top: 40%;
+   
+   div{
+     height: 100px;
+     margin: 20px;
+     background-color: yellow;
    }
+  
+   .two{
+     background-color: blueviolet;
+     position: relative;
+     /* position: relative means it is relative to its actual position; */
+     top: 40px;
+     right: 40px;
+   }
+
  </style>
 </head>
 <body>
- <h1>lorem ipsum</h1>
- 
+ <div class="one">
+   <h2>Heading of div 1</h2>
+ </div>
+ <div class="two">
+   <h2>Heading of div 2</h2>
+ </div>
 </body>
 </html>
