@@ -12,33 +12,38 @@
       box-sizing: border-box;
       margin: 4px;
     }
-    h2:nth-child(1){
-     padding: 5px;
-     color: white;
-     background-color: rgb(4, 0, 255);
-     transition-duration: 0.5s;
-     transition-timing-function: ease-in;
-   }
     
-   h2:nth-child(2){
-     padding: 5px;
-     color: white;
-     background-color: orange;
-     transition-duration: 0.5s;
-     transition-timing-function: linear;
-   }
-    
+    .parent{
+      background-color: black;
+      min-height: 200px;
+    }
 
-   h2:hover{
-     background-color: crimson;
-     cursor: pointer;
-   }
+    .child{
+      background-color: orange;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      /* transform: scale(0.2); */
+      /* transform: translate(100px); */
+      /* transform: rotateY(60deg); */
+      transition-duration: 0.5s;
+      transition-timing-function: linear;
+
+    }
+
+    div.parent:hover div.child{
+      background-color:red;
+      /* transform: rotateY(90deg); */
+      /* transform:scale(0.4) */
+      transform: translateX(500px);
+
+      
+    }
 
    
   </style>
 </head>
 <body>
- <h2>i am a heading</h2>
- <h2>i am a  heading</h2>
+ <div class="parent"><div class="child"></div></div>
 </body>
 </html>
