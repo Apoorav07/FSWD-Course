@@ -12,14 +12,20 @@
       box-sizing: border-box;
       margin: 4px;
     }
-   div.parent div:nth-child(1){
-     background-color: lime;
+    h2:nth-child(1){
+     padding: 5px;
+     color: white;
+     background-color: rgb(4, 0, 255);
+     transition-duration: 0.5s;
+     transition-timing-function: ease-in;
    }
-
-   h2{
+    
+   h2:nth-child(2){
      padding: 5px;
      color: white;
      background-color: orange;
+     transition-duration: 0.5s;
+     transition-timing-function: linear;
    }
     
 
@@ -28,41 +34,11 @@
      cursor: pointer;
    }
 
-   div::selection{
-     background-color: lime;
-   }
-
-   input:focus{
-     background-color: pink;
-     font-size: 2rem;
-   }
-
-   h2::after{
-     content: "i am after";
-     font-size: 0.5rem ;
-     color: cyan;
-     position: relative;
-   }
-
-   h2::before{
-     content: "i am before";
-     font-size: 0.5rem ;
-     color: rgb(255, 94, 0);
-     position: relative;
-   }
+   
   </style>
 </head>
 <body>
- <div class="parent">
-   <h2>i am a heading</h2>
-
-   <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quis repudiandae placeat molestias, consequatur labore hic eum a ea! Esse, facilis ducimus ex facere perspiciatis porro praesentium. Facilis, minima voluptatum.</div>
-   <input type="text">
-   
- </div>
- 
-    
-    
-  
+ <h2>i am a heading</h2>
+ <h2>i am a  heading</h2>
 </body>
 </html>
