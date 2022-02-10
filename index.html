@@ -10,32 +10,26 @@
       margin: 0px;
       padding: 0px;
       box-sizing: border-box;
-      margin: 4px;
+      
     }
     
     .parent{
       background-color: black;
-      min-height: 200px;
+      height: 500px;
     }
 
     .child{
       background-color: orange;
       height: 100px;
       width: 100px;
-      border-radius: 50%;
-      /* transform: scale(0.2); */
-      /* transform: translate(100px); */
-      /* transform: rotateY(60deg); */
-      transition-duration: 0.5s;
-      transition-timing-function: linear;
-
+      transition: 1s ease;
+      /* transition-property:background-color; */
+      transition-property: transform;
     }
 
     div.parent:hover div.child{
-      background-color:red;
-      /* transform: rotateY(90deg); */
-      /* transform:scale(0.4) */
-      transform: translateX(500px);
+      transform: translateX(80vw);
+      background-color: aqua;
 
       
     }
