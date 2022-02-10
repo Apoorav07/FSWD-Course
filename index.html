@@ -22,16 +22,24 @@
       background-color: orange;
       height: 100px;
       width: 100px;
-      transition: 1s ease;
-      /* transition-property:background-color; */
-      transition-property: transform;
+      
+      
     }
 
     div.parent:hover div.child{
-      transform: translateX(80vw);
-      background-color: aqua;
+      animation: 1s move;
+      animation-fill-mode:forwards;
 
       
+    }
+
+    @keyframes move {
+        0%{
+          transform: translateX(0vw);
+        }
+        100%{
+          transform: translateX(80vw);
+        }
     }
 
    
