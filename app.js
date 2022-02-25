@@ -1,9 +1,9 @@
 var heading =document.getElementById('heading')
-var para=document.getElementsByClassName('para')
-var tags=document.getElementsByTagName('a')
-var query=document.querySelector('.para')
 
+console.log(heading)
+heading.innerHTML='i was added by JS'
+heading.style='color:red;font-size:3rem'
 
-console.log(query)
-
-
+heading.classList.add('five')
+heading.classList.remove('one')
+console.log(heading.classList)
