@@ -4,11 +4,15 @@ var arr = ['go to the gym','eat food','clean house']
 //   console.log(arr[i])
 // }
 
-var callbackfunction= () =>{
-  console.log('i ran')
-}
 
-arr.forEach(callbackfunction)
+
+
+
+
+
+arr.forEach((element,index) =>{
+  console.log(element,index)
+})
 
 
 
