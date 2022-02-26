@@ -1,18 +1,11 @@
-var arr = ['go to the gym','eat food','clean house']
+var button=document.querySelector('button')
+var input= document.querySelector('input')
+var list=document.querySelector('ul')
 
-// for(var i = 0;i<arr.length;i++){
-//   console.log(arr[i])
-// }
+const callbackfunc = (event) => {
+  console.log(event.target)
+  console.log(input.value)
+}
 
-
-
-
-
-
-
-arr.forEach((element,index) =>{
-  console.log(element,index)
-})
-
-
+button.addEventListener('click',callbackfunc)
 
