@@ -1,20 +1,14 @@
-// var greet=function (Name='john',age='99') {
-  
-//   greet(Name,age)
-//   // console.log('hello')
-// }
-// console.log('apoo',19)
+var arr = ['go to the gym','eat food','clean house']
 
-// // here john and 99 are set as default value
-
-// console.log(add(10,20))
-
-// function add(a=0,b=0){
-  
-//   var sum =a+b
-//   return sum
+// for(var i = 0;i<arr.length;i++){
+//   console.log(arr[i])
 // }
 
+var callbackfunction= () =>{
+  console.log('i ran')
+}
 
-var add= (a=0,b=0) => a+b 
-console.log(add(10,20))
+arr.forEach(callbackfunction)
+
+
+
