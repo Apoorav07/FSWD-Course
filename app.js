@@ -1,16 +1,8 @@
-var list = document.querySelector('ul')
-console.log(list)
-
-
-
-
-var arr=['go to the gym','coook meal','eat']
-arr.push('blabla')
-for(var i=0;i<arr.length;i++){
-  var element=document.createElement('li')
-  var textnode=document.createTextNode(arr[i])
-  element.appendChild(textnode)
-  list.appendChild(element)
+function greet(Name,age) {
+  console.log(Name,age)
+  console.log('hello')
 }
+
+greet('Apoorav',19)
 
 
