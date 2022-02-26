@@ -16,7 +16,7 @@
 // }
 
 
-var add=function (a=0,b=0){
+var add= (a=0,b=0)=>{
   
   var sum =a+b
   return sum
