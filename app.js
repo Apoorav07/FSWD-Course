@@ -1,27 +1,28 @@
-// var arr=[1,2,3,4,5,6,7,8]
-// // var new_arr=arr.slice(2,5)
-// // console.log(new_arr)
+var button = document.querySelector('button')
+var input=document.querySelector('input')
+var list=document.querySelector('ul')
 
+var chores=[]
 
-// var arr=[1,2,3,4,5,6,7,8]
-// var new_arr=[]
+var deleteItem=(value)=>{
+  const index = chores.indexOf(value)
+  chores.splice(index,1)
+  console.log(chores)
+}
 
-// for (var i=0;i<arr.length;i++){
-//   if (arr[i]%2 ===0) new_arr.push(arr[i])
-// }
+const callbackfunc=(event)=>{
 
-// console.log(new_arr)
-
-
-
-
-// var arr=[1,2,3,4,5,6,7,8]
-// var new_arr =arr.filter((element,index)=>{
-//   if(element<4)return true
-// })
-
-// console.log(new_arr)
-
-var arr=[1,2,3,4,5,6,7,8]
-arr.splice(3,3)
-console.log(arr)
+const inputvalue=input.value
+if(chores.includes(inputvalue)) {
+  console.log('already exists')
+}
+else{
+  chores.push(inputvalue)
+  const element=document.createElement('li')
+  const textnode=document.createTextNode(inputvalue)
+  element.appendChild(textnode)
+  list.appendChild(element)
+  element.addEventListener('click',(e)=>{e.target.remove()})
+}
+}
+button.addEventListener('click',callbackfunc)
