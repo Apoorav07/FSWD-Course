@@ -6,4 +6,6 @@ let car={
   }
 }
 
-car.print()
+console.log(Object.keys(car))
+console.log(Object.values(car))
+console.log(car.hasOwnProperty('manufacturer'))
