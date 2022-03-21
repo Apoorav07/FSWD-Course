@@ -1,11 +1,10 @@
-let car={
-  name:"c class",
-  manufacturer:"mercedes",
-  print:function(){
-    console.log(`${this.name} was created by ${this.manufacturer}`)
-  }
-}
+//  promise is uncertain
+// it promises to return a value
+// promise is a object which might have a value with a promise that at some point it will have a value 
 
-console.log(Object.keys(car))
-console.log(Object.values(car))
-console.log(car.hasOwnProperty('manufacturer'))
+
+setTimeout( ()=> {
+ console.log('apoorav')
+},5000)
+
+
