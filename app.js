@@ -1,4 +1,9 @@
-let car={}
+let car={
+  name:"c class",
+  manufacturer:"mercedes",
+  print:function(){
+    console.log(`${this.name} was created by ${this.manufacturer}`)
+  }
+}
 
-console.log(car)
-console.log(typeof car)
+car.print()
