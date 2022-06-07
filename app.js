@@ -1,6 +1,6 @@
 let value = new Promise((resolve,reject) => {
   setTimeout(() => {
-    resolve('Hello')
+    reject('Hello')
   }, 3000)
 })
 
