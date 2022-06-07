@@ -1,10 +1,9 @@
-//  promise is uncertain
-// it promises to return a value
-// promise is a object which might have a value with a promise that at some point it will have a value 
+let value = new Promise((resolve,reject) => {
+  setTimeout(() => {
+    resolve('Hello')
+  }, 3000)
+})
 
-
-setTimeout( ()=> {
- console.log('apoorav')
-},5000)
-
-
+setTimeout(() => {
+  console.log(value)
+}, 4000)
