@@ -1,23 +1,28 @@
-// let response = fetch('http://jsonplaceholder.typicode.com/users').then(res => res.json()).then(data => {console.log(data)})
-
-const list =document.querySelector('ul')
+const table = document.querySelector('table')
 
 
-var arr = ['one','two','three','four']
 
-arr.forEach(chore =>{
- const element =document.createElement('li')
- const textnode =document.createTextNode(chore)
- element.appendChild(textnode)
- console.log(element)
- 
- element.addEventListener('click', (e) => {
-   
-   const userinput =window.prompt(`are you sure you want to delete "${chore}" `)
-   if (userinput === 'YES') e.target.remove('chore')
- })
 
- list.appendChild(element)
+fetch('http://jsonplaceholder.typicode.com/users')
+.then(res => res.json())
+.then(data => {
+  
+  data.forEach(user => {
+    let newrow = document.createElement('tr')
+    let element =
+    `<td>${user.id}</td>
+    <td>${user.name}</td>
+    <td>${user.email}</td>
+    <td>${user.username}</td>`
+     newrow.innerHTML=element
+     table.appendChild(newrow)
+  })
 })
+
+
+
+
+
+
 
 
