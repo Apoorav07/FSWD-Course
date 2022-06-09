@@ -1,23 +1,17 @@
-const table = document.querySelector('table')
 
 
 
+const fetchdata = async() =>{
+ 
+  const response = await fetch('http://jsonplaceholder.typicode.com/users')
 
-fetch('http://jsonplaceholder.typicode.com/users')
-.then(res => res.json())
-.then(data => {
+  const data = await response.json()
   
-  data.forEach(user => {
-    let newrow = document.createElement('tr')
-    let element =
-    `<td>${user.id}</td>
-    <td>${user.name}</td>
-    <td>${user.email}</td>
-    <td>${user.username}</td>`
-     newrow.innerHTML=element
-     table.appendChild(newrow)
-  })
-})
+  console.log(data)
+   
+}
+
+fetchdata()
 
 
 
