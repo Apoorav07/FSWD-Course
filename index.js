@@ -2,9 +2,8 @@
 
 const greet = () => 'hi'
 module.exports.greet = greet
-console.log(module)
 
 
-const geet = () => 'hi'
-module.exports.something = 'hi'
-console.log(module)
+console.log('i am index.js')
+
+
