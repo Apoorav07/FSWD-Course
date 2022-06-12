@@ -1,12 +1,10 @@
-const stuff =require('./index')
+const {add,subtract,divide,multiply, message} = require('./utilis')
 
-console.log(stuff)
-
-// require function : it is a build in function in nodejs that gives you access to the exports of the file that you specify in require 
-
-
-
-
+add()
+divide()
+multiply()
+subtract()
+console.log(message)
 
 
 
