@@ -1,17 +1,23 @@
-// const button =document.querySelector('button')
-// const input =document.querySelector('input')
-// const div = document.querySelector('div')
+const button =document.querySelector('button')
+const input =document.querySelector('input')
+const div = document.querySelector('div')
 
-// localStorage.getItem
+// div.innerHTML = localStorage.getItem('InputValue')
 
 // button.addEventListener('click',(req,res) => {
-//   localStorage.setItem('InputValue',input.value)
+//   localStorage.setItem('InputValue',[1,2,3,4,5])
 //   div.innerHTML=input.value
+  
 // })
 
 
-localStorage.setItem('inputvalue','something')
-console.log(localStorage.getItem('inputvalue'))
+const arr = [1,2,3,4,5]
+
+
+
+
+localStorage.setItem('val',JSON.stringify(arr))
+console.log(JSON.parse(localStorage.getItem('val')))
 
 
 
