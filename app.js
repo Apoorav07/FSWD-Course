@@ -1,34 +1,29 @@
-const button =document.querySelector('button')
-const input =document.querySelector('input')
-const div = document.querySelector('div')
+const path = require('path')
 
-// div.innerHTML = localStorage.getItem('InputValue')
+// console.log(path.resolve('./app.js'))
 
-// button.addEventListener('click',(req,res) => {
-//   localStorage.setItem('InputValue',[1,2,3,4,5])
-//   div.innerHTML=input.value
-  
-// })
+// resolve method converts relative path to absolute path
 
 
-const arr = [1,2,3,4,5]
+// console.log(path.relative('/','./temp/utilis.js'))
+
+// path.relative converts your path to relative path
+// path.relative will specify you the  relative path of second parameter to the first parameter
+
+//  console.log(path.extname('./app.js'))
+
+// path.extname gives you the extension name of file you specified
 
 
+// console.log(path.dirname('./temp/utilis.js'))
+
+// path.dirname will give you the name of directory where your file is
+
+// console.log(__dirname)
 
 
-localStorage.setItem('val',JSON.stringify(arr))
-console.log(JSON.parse(localStorage.getItem('val')))
-
-
-
-
-
-
-
+// __dirname gives you path of current directory yoou are in
 
 
 
-
-
-
-
+console.log(path.join(__dirname,'app.js'))
