@@ -1,18 +1,20 @@
 const express =require('express')
 const app =express()
 
-const verify =(req,res,next)=>{
-  if(req.headers['user-agent'] === 'Thunder Client (https://www.thunderclient.com)') next()
-  else res.send('BLOCKED')
+const logger =(req,res,next)=>{
+  console.log(req.method)
+  next()
 }
 
+app.use(logger)
 
-app.get('/',verify,(req,res)=>{
-  res.send('verified')
-  
+app.get('/',(req,res)=>{
+  res.send('hemlo sirmji')
 })
 
-
+app.post('/',(req,res)=>{
+  res.send('servevr changa si')
+})
 
 app.listen(3000,()=>{
   console.log('server listening to port 3000')
