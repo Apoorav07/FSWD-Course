@@ -3,6 +3,8 @@ const app =express()
 
 app.use(express.json())
 
+const token ='top_secret'
+
 let products = [{name:'iphone12 case',price:'999'},{name:'iphone13 case',price:'1199'},{name:'iphone13 pro case',price:'1499'}]
 
 const validator =(req,res,next) =>{
@@ -11,6 +13,10 @@ const validator =(req,res,next) =>{
   else next()
 }
 
+const isauthorised = (req,res,next) =>{
+  if (req.headers.authorisation === token) next()
+  else res.json({error:"unauthorised"})
+}
 
 //public routes
 //get route
@@ -23,7 +29,7 @@ app.get('/products',(req,res)=>{
 
 //private routes
 
-app.post('/products/add',validator,(req,res)=>{
+app.post('/products/add',isauthorised,validator,(req,res)=>{
  const{name,price}=req.body
   const newproduct={
     name,
@@ -35,6 +41,24 @@ app.post('/products/add',validator,(req,res)=>{
   
   
 })
+
+//authentication route
+
+app.post('/auth',(req,res)=>{
+  const{email,password}=req.body
+
+  if(email === 'admin@gmail.com' && password === 'password') {
+    res.send({token})
+  }else {
+    res.send({message:'unauthorised'})
+  }
+
+   res.send({products})
+ 
+   
+   
+ })
+
 
 
 app.listen(3000,()=>{
