@@ -1,13 +1,17 @@
 const express =require('express')
 const app =express()
+const database = require('./database/db')
+const categoryroutes = require('./routes/categoryroutes')
 
-app.get('/products/cases')
-app.get('/products/protection')
-app.get('/products/bands')
-
-app.get('/products/:categories',(req,res)=>{
-  console.log(req.params)
-  res.send('PING')
+ 
+app.use(express.json())
+app.use('/',categoryroutes)
+app.get('/',(req,res)=>{
+  try {
+    console.log(document)
+  } catch (error) {
+    res.status(203).send(error.message)
+  }
 })
 
 
