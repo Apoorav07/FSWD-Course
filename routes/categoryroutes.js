@@ -25,16 +25,18 @@ router.get('/all',(req,res)=>{
 
 
 router.post('/add',(req,res)=>{
-  try {
-    const{name}=req.body
+  const{name}=req.body
     let newcategory ={
-      name,
-      id:uuidv4()
+      
+      id:uuidv4(),
+      name
     }
     database.categories.push(newcategory)
+  try {
+    
     res.status(200).json({
-      categories:categories,
-      message:error.message,
+      categories:database.categories,
+      message:"successfully added category",
       status: "SUCCESS"
     })
   } catch (error) {
