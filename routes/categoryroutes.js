@@ -27,12 +27,15 @@ router.get('/all',(req,res)=>{
 router.post('/add',(req,res)=>{
   const{name}=req.body
     let newcategory ={
-      
       id:uuidv4(),
       name
     }
-    database.categories.push(newcategory)
+  
   try {
+    const includes = database.categories.find(item =>item.name ===name)
+  if(!includes)database.categories.push(newcategory)
+  else console.log("already exists")
+
     
     res.status(200).json({
       categories:database.categories,
@@ -40,13 +43,40 @@ router.post('/add',(req,res)=>{
       status: "SUCCESS"
     })
   } catch (error) {
-    res.status(200).json({
+    res.json({
       categories:[],
       message:error.message,
       status: "FAILED"
     })
   }
 })
+
+router.delete('/delete',(req,res)=>{
+  try {
+    const {id} =req.body
+    // let element =database.categories.find(item=> item.id === id)
+    // const index = database.categories.indexOf(element)
+    // database.categories.splice(index,1)
+    
+    const newcategories = database.categories.filter(item => item.id!==id)
+    database.categories = newcategories
+
+
+    
+    res.json({
+      categories:newcategories,
+      message:"successfully removed category",
+      status: "SUCCESS"
+    })
+  } catch (error) {
+    res.json({
+      categories:[],
+      message:error.message,
+      status: "FAILED"
+    })
+  }
+})
+
 
 
 
