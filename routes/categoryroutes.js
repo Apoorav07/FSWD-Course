@@ -77,7 +77,28 @@ router.delete('/delete',(req,res)=>{
   }
 })
 
+router.put('/update',(req,res)=>{
+  try {
+    const {id , newname} = req.body
+   const element = database.categories.find(item=> item.id === id)
+    if(element.name !== newname){
+      const newcategory = element.name.replace(name,newname)
+      database.categories=newcategory
+    }
+    else{console.log('already exists')}
+   
+    res.json({
+     categories:newcategory,
+     message: "successfully updated",
+     status: "success"
+    })
 
+  } catch (error) {
+   res.json({categories:[],
+    message : error.message,
+    status: "failed"}) 
+  }
+})
 
 
 module.exports = router

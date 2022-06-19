@@ -3,6 +3,7 @@ const express = require('express')
 const router = express.Router()
 const database = require('../database/db')
 const { v4:uuidv4} =require('uuid')
+const { products } = require('../database/db')
 
 
 router.get('/all',(req,res)=>{
@@ -64,7 +65,28 @@ router.post('/add',(req,res)=>{
 })
 
 
+router.delete('/delete',(req,res)=>{
+  
+   try {
+    const {id} = req.body
 
+  const newproducts = database.products.filter(item => item.id !== id)
+   database.products = newproducts
+
+     res.json({
+      products:newproducts,
+      message:"product removed successfully",
+      status : "success"
+     })
+   } catch (error) {
+    res.json({
+      products :[] ,  
+      message:error.message,
+      status :"failed"
+
+    })
+   }
+})
 
 
 
