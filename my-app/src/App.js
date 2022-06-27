@@ -1,15 +1,15 @@
 
-import Navbar from './layout/Navbar'
-import Footer from './layout/Footer'
+// import Navbar from './layout/Navbar'
+// import Footer from './layout/Footer'
 import Content from './components/Content'
 
 const App =()=> {
 
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar /> */}
       <Content />
-      <Footer />
+      {/* <Footer /> */}
    </div>
     
   );
