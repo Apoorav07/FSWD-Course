@@ -1,16 +1,13 @@
 
-// import Navbar from './layout/Navbar'
-// import Footer from './layout/Footer'
-import Content from './components/Content'
+import Description from "./components/Description";
 
 const App =()=> {
 
   return (
-    <div className="App">
-      {/* <Navbar /> */}
-      <Content />
-      {/* <Footer /> */}
-   </div>
+    <div>
+      <Description/>
+    </div>
+    
     
   );
 }
