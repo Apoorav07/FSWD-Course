@@ -1,11 +1,13 @@
-
-import Description from "./components/Description";
+import {useState} from 'react';
+import One from "./components/One";
 
 const App =()=> {
 
+  
+
   return (
     <div>
-      <Description/>
+      <One  />
     </div>
     
     
