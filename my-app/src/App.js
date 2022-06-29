@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import One from "./components/One";
+import List from './components/List'
 
 const App =()=> {
 
@@ -7,7 +7,7 @@ const App =()=> {
 
   return (
     <div>
-      <One  />
+    <List/>
     </div>
     
     

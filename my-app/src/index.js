@@ -7,7 +7,10 @@ import reducer from './reducer/reducer';
 import { Provider } from 'react-redux';
 import {composeWithDevTools} from 'redux-devtools-extension'
 
-const store = createStore(reducer,{products : ['iphone11','iphone 12','iphone13'],categories:['mobiles','bands','covers']},composeWithDevTools())
+const chores =[{id:1,text:"take the medicine"},{id:2,text:"eat food"},{id:3,text:"sleep"}]
+
+
+const store = createStore(reducer,chores,composeWithDevTools())
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
