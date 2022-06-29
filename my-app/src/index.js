@@ -5,8 +5,9 @@ import App from './App';
 import { createStore } from 'redux';
 import reducer from './reducer/reducer';
 import { Provider } from 'react-redux';
+import {composeWithDevTools} from 'redux-devtools-extension'
 
-const store = createStore(reducer)
+const store = createStore(reducer,{products : ['iphone11','iphone 12','iphone13'],categories:['mobiles','bands','covers']},composeWithDevTools())
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

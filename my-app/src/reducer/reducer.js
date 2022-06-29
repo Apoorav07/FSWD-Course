@@ -1,16 +1,13 @@
-const initState = [
-  {password:"something"},
-  {password:"sometggggggghing"},
-  {password:"somethggging"}
-]
 
 
 
 
-const reducer = (state = initState,action) =>{
-   switch (action.type){
-    case 'ADD_DATA':
-      return [...state,action.payload]
+const reducer = (state = {},action) =>{
+  const {type,payload} = action 
+   switch (type){
+   case "ADD_PRODUCT":
+    const {products} = state
+    return {...state,products:[...products,payload]}
     default:
       return state
    }
